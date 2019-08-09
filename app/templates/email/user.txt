@@ -1,0 +1,5 @@
+Hello {{user.username}}
+Welcome to Movie Hub
+We have just seen you signed up for our application and want to welcome you to the family. Please enjoy the reviews of all your favourite films and dont forget to create you own list of genre of movies.
+
+                WELCOME :)

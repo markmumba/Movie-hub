@@ -1,0 +1,39 @@
+{% extends 'base.html'%}
+{% import 'macros.html' as macro %}
+
+{% block styles%}
+{{ super() }}
+<link href="https://fonts.googleapis.com/css?family=PT+Sans&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+<link rel="stylesheet" href="css/index.css">
+
+{% endblock %}
+
+
+{% block content %}
+<div class="container">
+    <form>
+        <input type="text" name="movie_query" placeholder="Search for a Movie" class="form-control">
+        <input type="submit" value="Submit" class="btn btn-default">
+    </form>
+</div>
+
+<div class="container">
+   <div class="row">
+      <h2>   POPULAR MOVIES </h2>
+       {{ macro.displayMovieList(popular)}}
+    </div>
+    <div class="row">
+        <h2>  UPCOMING MOVIES </h2>
+            {{ macro.displayMovieList(popular)}}
+    </div>
+    <div class="row">
+        <h2>   NOW SHOWING MOVIES</h2>
+
+         {{ macro.displayMovieList(popular)}}
+    </div>
+
+</div>
+
+{% endblock %}
